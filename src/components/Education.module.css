@@ -1,0 +1,169 @@
+.education {
+  position: relative;
+}
+
+.eduCard {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.eduCard:hover .eduGlow {
+  opacity: 0.25;
+}
+
+.eduIcon {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  background: var(--gradient-card);
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-cyan);
+}
+
+.eduContent {
+  flex: 1;
+}
+
+.eduInstitution {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.eduDegree {
+  font-size: 1rem;
+  color: var(--accent-purple);
+  font-family: var(--font-mono);
+  margin-bottom: 16px;
+}
+
+.eduMeta {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.eduPeriod,
+.eduCgpa {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.eduCgpa {
+  color: var(--accent-cyan);
+  font-weight: 600;
+}
+
+.eduCgpa svg {
+  color: #ffd700;
+}
+
+.eduGlow {
+  position: absolute;
+  top: -50%;
+  right: -30%;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(0, 229, 255, 0.15) 0%,
+    transparent 70%
+  );
+  opacity: 0.1;
+  transition: var(--transition-smooth);
+  pointer-events: none;
+}
+
+/* Achievements */
+.achievementsSection {
+  margin-top: 64px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.achieveTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+  background: var(--gradient-hero);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.achieveGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.achieveCard {
+  display: flex;
+  gap: 16px;
+  padding: 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  transition: var(--transition-normal);
+}
+
+.achieveCard:hover {
+  border-color: var(--border-glow);
+  background: var(--bg-card-hover);
+  transform: translateY(-2px);
+}
+
+.achieveIcon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.achieveCard h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.achieveCard p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.achieveCard strong {
+  color: var(--accent-cyan);
+}
+
+@media (max-width: 768px) {
+  .eduCard {
+    flex-direction: column;
+    text-align: center;
+    padding: 28px;
+  }
+
+  .eduMeta {
+    justify-content: center;
+  }
+
+  .achieveGrid {
+    grid-template-columns: 1fr;
+  }
+}

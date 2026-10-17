@@ -1,0 +1,149 @@
+.about {
+  position: relative;
+}
+
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.aboutAvatar {
+  display: flex;
+  justify-content: center;
+}
+
+.avatarWrapper {
+  position: relative;
+  width: 260px;
+  height: 260px;
+}
+
+.avatarPlaceholder {
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  background: var(--gradient-card);
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: var(--text-muted);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.avatarPlaceholder svg {
+  opacity: 0.3;
+}
+
+.avatarLabel {
+  font-size: 0.8rem;
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+  opacity: 0.5;
+}
+
+.avatarGlow {
+  position: absolute;
+  inset: -2px;
+  border-radius: 26px;
+  background: var(--gradient-main);
+  z-index: 0;
+  opacity: 0.3;
+  filter: blur(8px);
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
+.avatarRing {
+  position: absolute;
+  inset: -8px;
+  border-radius: 30px;
+  border: 1px solid rgba(0, 229, 255, 0.1);
+  z-index: 0;
+}
+
+.aboutContent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.aboutText {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.85;
+}
+
+.textHighlight {
+  color: var(--accent-cyan);
+  font-weight: 600;
+}
+
+.aboutHighlights {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.highlightCard {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  transition: var(--transition-normal);
+}
+
+.highlightCard:hover {
+  border-color: var(--border-glow);
+  background: var(--bg-card-hover);
+  transform: translateX(4px);
+}
+
+.highlightCard div {
+  display: flex;
+  flex-direction: column;
+}
+
+.highlightCard strong {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.highlightCard span {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.highlightIcon {
+  font-size: 1.5rem;
+  min-width: 36px;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .aboutGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .avatarWrapper {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 600px) {
+  .aboutHighlights {
+    grid-template-columns: 1fr;
+  }
+}
